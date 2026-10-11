@@ -1,0 +1,31 @@
+# ignore everything by default
+/*
+
+# allow the gitignore itself
+!.gitignore
+
+# tracked configs
+!nvim/
+!fish/
+!hypr/
+!kitty/
+!waybar/
+!rofi/
+!cava/
+!fastfetch/
+!neofetch/
+!matugen/
+!gtk-3.0/
+!qt6ct/
+!Thunar/
+!dinit.d/
+!mimeapps.list
+!colors.lua
+!pavucontrol.ini
+
+fish/fish_variables
+fish/generated-colors.fish
+kitty/matugen-colors.conf
+kitty/current-theme.conf
+*.bak
+.vscode/

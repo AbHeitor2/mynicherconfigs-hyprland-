@@ -1,0 +1,9 @@
+[config]
+
+[templates.fish]
+input_path = '~/.config/matugen/templates/fish-colors.fish'
+output_path = '~/.config/fish/generated-colors.fish'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/matugen-colors.conf'

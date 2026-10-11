@@ -1,0 +1,6 @@
+[Default Applications]
+application/vnd.debian.binary-package=cmake-gui.desktop
+
+[Added Associations]
+application/vnd.debian.binary-package=cmake-gui.desktop;
+image/jpeg=firefox.desktop;

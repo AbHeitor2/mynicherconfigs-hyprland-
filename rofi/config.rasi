@@ -1,0 +1,170 @@
+/**
+ * Rofi theme inspired by Walker (wayland app launcher)
+ * Rounded corners, centered, minimal dark style
+ */
+
+configuration {
+    modi:                       "drun,run,window";
+    show-icons:                 true;
+    icon-theme:                 "Papirus";
+    display-drun:               "";
+    display-run:                "Run";
+    display-window:             "Windows";
+    drun-display-format:        "{name}";
+    disable-history:            false;
+    hide-scrollbar:             true;
+    sidebar-mode:               false;
+}
+
+* {
+    bg0:            #070707ee;
+    bg1:            #4a4a4acc;
+    bg-selected:    #08080826;
+
+    fg0:            #f2f2f2;
+    fg1:            #b0b0b0;
+
+    accent:         #ffffff;
+    accent-text:    #2a2a2a;
+
+    border-color:   #ffffff33;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       600px;
+
+    background-color:            @bg0;
+    border:                      2px;
+    border-color:                @border-color;
+    border-radius:                20px;
+
+    padding:                     18px;
+}
+
+mainbox {
+    background-color:  transparent;
+    children:           [ inputbar, listview ];
+    spacing:             14px;
+}
+
+inputbar {
+    background-color:  @bg1;
+    text-color:          @fg0;
+    border-radius:        14px;
+    padding:              10px 16px;
+    spacing:              10px;
+    children:             [ prompt, entry ];
+}
+
+prompt {
+    background-color:  transparent;
+    text-color:          @accent;
+    font:                "JetBrainsMono Nerd Font Bold 11";
+}
+
+entry {
+    background-color:  transparent;
+    text-color:          @fg0;
+    placeholder:        "Search...";
+    placeholder-color:  @fg1;
+}
+
+listview {
+    background-color:  transparent;
+    columns:              1;
+    lines:                6;
+    spacing:              6px;
+    cycle:                true;
+    dynamic:              true;
+    layout:               vertical;
+    border: 		  0px;
+    padding:		  0px;
+}
+
+element {
+    background-color:  transparent;
+    text-color:          @fg1;
+    border-radius:        12px;
+    padding:              8px 12px;
+    spacing:              10px;
+    orientation:          horizontal;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:  transparent;
+    text-color:          @fg1;
+}
+
+element selected.normal {
+    background-color:  @bg-selected;
+    text-color:          @fg0;
+    border:               1px;
+    border-color:         @border-color;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:  transparent;
+    text-color:          @fg0;
+}
+
+element selected.urgent {
+    background-color:  @bg-selected;
+    text-color:          @fg0;
+    border:               1px;
+    border-color:         @border-color;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:  transparent;
+    text-color:          @accent;
+}
+
+element selected.active {
+    background-color:  @bg-selected;
+    text-color:          @accent;
+    border:               1px;
+    border-color:         @border-color;
+}
+
+element-icon {
+    size:                 24px;
+    vertical-align:       0.5;
+}
+
+element-text {
+    vertical-align:       0.4;
+    text-color:           inherit;
+}
+
+scrollbar {
+    width:                0px;
+}
+
+message {
+    background-color:  @bg1;
+    border-radius:        12px;
+    padding:              8px 12px;
+}
+
+textbox {
+    text-color:  @fg1;
+}
+
+error-message {
+    background-color:  @bg0;
+    text-color:          @fg0;
+    border-radius:        16px;
+    padding:              16px;
+}
